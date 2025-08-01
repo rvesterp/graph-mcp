@@ -94,6 +94,38 @@ Add the following to your Claude Desktop MCP configuration file:
 }
 ```
 
+## Security Considerations
+
+### ⚠️ Important Security Notes
+
+1. **Never commit sensitive files**: The `.gitignore` file is configured to prevent accidental commits of:
+   - `config/config.js` (contains your Azure credentials)
+   - `data/` directory (contains encrypted tokens)
+   - Any files with `.key`, `.pem`, `.crt`, `.cert` extensions
+   - Environment files (`.env`)
+
+2. **Token Storage**: Authentication tokens are encrypted and stored locally in the `data/` directory
+3. **Machine Binding**: Tokens are tied to your specific machine for enhanced security
+4. **Azure App Registration**: Each user should create their own Azure app registration
+
+### 🔒 Before Sharing or Pushing to GitHub
+
+1. **Verify no secrets are committed**:
+   ```bash
+   git status
+   ```
+   Ensure `config/config.js` and `data/` are not tracked
+
+2. **Check for sensitive files**:
+   ```bash
+   git ls-files | grep -E "(config\.js|\.env|\.key|\.pem)"
+   ```
+   This should return no results
+
+3. **Use template configuration**:
+   - Keep `config/config.template.js` in the repository
+   - Users should copy it to `config/config.js` and add their own credentials
+
 ## First Run Authorization
 
 1. Start Claude Desktop

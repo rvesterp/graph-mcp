@@ -15,6 +15,22 @@ yarn-error.log*
 data/
 *.enc
 
+# Configuration files with secrets
+config/config.js
+config/*.local.js
+config/*.prod.js
+config/*.dev.js
+*.config.js
+!config/config.template.js
+
+# Authentication and token files
+auth-tokens.json
+tokens.json
+*.token
+*.tokens
+auth.json
+credentials.json
+
 # Logs
 logs
 *.log
@@ -48,3 +64,14 @@ Thumbs.db
 # Temporary files
 tmp/
 temp/
+
+# Additional security patterns
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cert
+secrets/
+.secrets
+.secret
