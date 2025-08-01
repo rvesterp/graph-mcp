@@ -75,3 +75,6 @@ temp/
 secrets/
 .secrets
 .secret
+
+# Documentation
+Documentation/
