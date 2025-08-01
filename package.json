@@ -1,0 +1,31 @@
+{
+    "name": "graph-mcp",
+    "version": "1.0.0",
+    "description": "Microsoft Graph MCP Server for Claude Desktop",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "node --watch index.js"
+    },
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^0.4.0",
+        "axios": "^1.6.0",
+        "crypto": "^1.0.1",
+        "fs": "^0.0.1-security",
+        "luxon": "^3.7.1",
+        "node-machine-id": "^1.1.12",
+        "path": "^0.12.7"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "keywords": [
+        "mcp",
+        "microsoft-graph",
+        "claude-desktop",
+        "oauth2"
+    ],
+    "author": "RAVP",
+    "license": "MIT"
+}
